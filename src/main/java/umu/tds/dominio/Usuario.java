@@ -10,6 +10,7 @@ public class Usuario {
 	private String password;
 	private String fechaNacimiento;
 	
+	
 	public Usuario(String nombre, String apellidos, String email, String login, String password,
 			String fechaNacimiento) {
 		this.id = 0;
