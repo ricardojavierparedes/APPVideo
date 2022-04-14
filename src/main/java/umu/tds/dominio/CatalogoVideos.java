@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.Set;
 
 import umu.tds.dao.DAOException;
-import umu.tds.dao.DAOFactory;
+import umu.tds.dao.FactoriaDAO;
 
 public class CatalogoVideos {
 
@@ -19,7 +19,7 @@ public class CatalogoVideos {
 	private Map<String, Set<Videos>> videoPorEtiquetas;
 
 	// Fatoria
-	private DAOFactory factoria;
+	private FactoriaDAO factoria;
 
 	// Metodo SINGLETONc
 	public static CatalogoVideos getUnicaInstancia() {
@@ -37,8 +37,8 @@ public class CatalogoVideos {
 		videoPorEtiquetas = new HashMap<String, Set<Videos>>();
 
 		try {
-			factoria = DAOFactory.getUnicaInstancia();
-			List<Videos> listaVideos = factoria.getVideos().getAll();
+			factoria = FactoriaDAO.getunicaInstancia();
+			List<Videos> listaVideos = factoria.getVideosDAO().getAll();
 			listaVideos.stream().forEach(v -> {
 				listaVideos.add(v);
 			});

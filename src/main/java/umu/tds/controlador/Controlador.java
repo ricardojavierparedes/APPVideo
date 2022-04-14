@@ -15,7 +15,7 @@ public final class Controlador {
 	private Controlador() {
 		usuarioActual = null;
 		try {
-			factoria = FactoriaDAO.getInstancia();
+			factoria = FactoriaDAO.getunicaInstancia();
 		} catch (DAOException e) {
 			e.printStackTrace();
 		}

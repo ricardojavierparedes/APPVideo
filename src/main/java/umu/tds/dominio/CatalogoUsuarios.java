@@ -26,7 +26,7 @@ public class CatalogoUsuarios {
 		asistentesPorLogin = new HashMap<String, Usuario>();
 
 		try {
-			factoria = FactoriaDAO.getInstancia();
+			factoria = FactoriaDAO.getunicaInstancia();
 
 			List<Usuario> listaAsistentes = factoria.getUsuarioDAO().getAll();
 			for (Usuario usuario : listaAsistentes) {

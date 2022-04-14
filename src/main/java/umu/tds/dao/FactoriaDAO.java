@@ -14,7 +14,7 @@ public abstract class FactoriaDAO {
 	 * Crea un tipo de factoria DAO.
 	 * Solo existe el tipo TDSFactoriaDAO
 	 */
-	public static FactoriaDAO getInstancia(String tipo) throws DAOException{
+	public static FactoriaDAO getunicaInstancia(String tipo) throws DAOException{
 		if (unicaInstancia == null)
 			try { 
 				unicaInstancia=(FactoriaDAO) Class.forName(tipo).newInstance();
@@ -25,13 +25,15 @@ public abstract class FactoriaDAO {
 	}
 	
 
-	public static FactoriaDAO getInstancia() throws DAOException{
-		return getInstancia(FactoriaDAO.DAO_TDS);
+	public static FactoriaDAO getunicaInstancia() throws DAOException{
+		return getunicaInstancia(FactoriaDAO.DAO_TDS);
 	}
 
 	protected FactoriaDAO (){}
 	
 	// Metodos factoria para obtener adaptadores
-	
-	public abstract UsuarioDAO getUsuarioDAO();	
+
+	public abstract DAOVideos getVideosDAO();
+	public abstract UsuarioDAO getUsuarioDAO();
+	public abstract DAOListaVideos getListaVideosDAO();
 }

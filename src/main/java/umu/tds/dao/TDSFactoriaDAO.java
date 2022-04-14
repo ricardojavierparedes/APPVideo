@@ -14,4 +14,17 @@ public final class TDSFactoriaDAO extends FactoriaDAO {
 		return new TDSUsuarioDAO(); 
 	}
 
+	@Override
+	public DAOVideos getVideosDAO() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public DAOListaVideos getListaVideosDAO() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
 }
