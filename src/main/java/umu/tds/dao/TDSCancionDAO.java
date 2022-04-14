@@ -2,12 +2,12 @@ package umu.tds.dao;
 
 import java.util.List;
 
-import umu.tds.dominio.Videos;
+import umu.tds.dominio.Video;
 
 public class TDSCancionDAO implements DAOVideos{
 
 	@Override
-	public void add(Videos videos) {
+	public void add(Video videos) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -19,13 +19,13 @@ public class TDSCancionDAO implements DAOVideos{
 	}
 
 	@Override
-	public Videos get(int id) {
+	public Video get(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<Videos> getAll() {
+	public List<Video> getAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}

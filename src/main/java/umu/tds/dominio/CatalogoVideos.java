@@ -14,9 +14,9 @@ public class CatalogoVideos {
 	// Implementacion con SINGLETON
 	private static CatalogoVideos unicaInstancia;
 
-	private Map<String, Videos> videoPorId;
-	private Map<String, Set<Videos>> videoPorTitulo;
-	private Map<String, Set<Videos>> videoPorEtiquetas;
+	private Map<String, Video> videoPorId;
+	private Map<String, Set<Video>> videoPorTitulo;
+	private Map<String, Set<Video>> videoPorEtiquetas;
 
 	// Fatoria
 	private FactoriaDAO factoria;
@@ -32,13 +32,13 @@ public class CatalogoVideos {
 	}
 
 	public CatalogoVideos() {
-		videoPorId = new HashMap<String, Videos>();
-		videoPorTitulo = new HashMap<String, Set<Videos>>();
-		videoPorEtiquetas = new HashMap<String, Set<Videos>>();
+		videoPorId = new HashMap<String, Video>();
+		videoPorTitulo = new HashMap<String, Set<Video>>();
+		videoPorEtiquetas = new HashMap<String, Set<Video>>();
 
 		try {
 			factoria = FactoriaDAO.getunicaInstancia();
-			List<Videos> listaVideos = factoria.getVideosDAO().getAll();
+			List<Video> listaVideos = factoria.getVideosDAO().getAll();
 			listaVideos.stream().forEach(v -> {
 				listaVideos.add(v);
 			});
@@ -48,10 +48,10 @@ public class CatalogoVideos {
 		}
 	}
 
-	public void add(Videos videos) {
+	public void add(Video videos) {
 		videoPorId.put(videos.getId(), videos);
 		videoPorTitulo.get(videos.getTitulo()).add(videos);
-		LinkedList<Etiquetas> etiquetas = (LinkedList<Etiquetas>) videos.getEtiquetas();
+		LinkedList<Etiqueta> etiquetas = (LinkedList<Etiqueta>) videos.getEtiquetas();
 		etiquetas.stream().forEach(e -> {
 			etiquetas.add(e);
 			String a = e.getNombre();

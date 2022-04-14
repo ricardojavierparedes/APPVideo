@@ -8,19 +8,19 @@ public class ListaVideos {
 	private int id;
 	private String nombre;
 	
-	private List<Videos> videos;
+	private List<Video> videos;
 	
 	public ListaVideos(String nombre) {
 		this.nombre = nombre;
-		this.videos = new LinkedList<Videos>();
+		this.videos = new LinkedList<Video>();
 	}
 	
-	public ListaVideos(String nombre, List<Videos> lista) {
+	public ListaVideos(String nombre, List<Video> lista) {
 		this.nombre = nombre;
-		this.videos = new LinkedList<Videos>(lista);
+		this.videos = new LinkedList<Video>(lista);
 	}
 	
-	public ListaVideos(String nombre, LinkedList<Videos> lista) {
+	public ListaVideos(String nombre, LinkedList<Video> lista) {
 		this.nombre = nombre;
 		this.videos = lista;
 	}
@@ -37,11 +37,11 @@ public class ListaVideos {
 		this.nombre = nombre;
 	}
 	
-	public List<Videos> getVideos() {
+	public List<Video> getVideos() {
 		return videos;
 	}
 	
-	public void addVideo(Videos video) {
+	public void addVideo(Video video) {
 		this.videos.add(video);
 	}
 	

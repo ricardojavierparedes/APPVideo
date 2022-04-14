@@ -1,7 +1,7 @@
 package umu.tds.dao;
 
 import java.util.List;
-import umu.tds.dominio.Videos;
+import umu.tds.dominio.Video;
 
 public interface DAOVideos {
 	
@@ -9,10 +9,10 @@ public interface DAOVideos {
 	 * Metodos DAO
 	 */
 	
-	public void add(Videos videos);
+	public void add(Video videos);
 	public void delete(int id);
-	public Videos get(int id);
-	public List<Videos> getAll();
+	public Video get(int id);
+	public List<Video> getAll();
 	
 
 }

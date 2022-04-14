@@ -1,10 +1,10 @@
 package umu.tds.dominio;
 
-public class Etiquetas {
+public class Etiqueta {
 	
 	private String nombre;
 	
-	public Etiquetas(String nombre) {
+	public Etiqueta(String nombre) {
 		
 		this.nombre = nombre;
 		// TODO Auto-generated constructor stub
